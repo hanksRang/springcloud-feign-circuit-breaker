@@ -1,0 +1,18 @@
+server:
+  port: 8631
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.222.11.116:8848
+        namespace: 3d9a7f6c-32f0-4797-a7a2-11375f47b522
+      config:
+        server-addr: 124.222.11.116:8848
+        namespace: 3d9a7f6c-32f0-4797-a7a2-11375f47b522
+        group: DEFAULT_GROUP  # 默认分组就是DEFAULT_GROUP，如果使用默认分组可以不配置
+        file-extension: yml   #默认properties
+
+feign:
+  hystrix:
+    enabled: true
